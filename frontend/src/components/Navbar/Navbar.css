@@ -1,0 +1,137 @@
+.navbar {
+  width: 100%;
+  height:130px;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000; /* Black background */
+  position: fixed; /* Fixed at top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures it stays above other elements */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+
+.navbar .logo {
+  width: 125px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #fff; /* White text */
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-menu a:hover,
+.navbar-menu .active {
+  color: #FF6347; /* Tomato Red */
+  border-bottom: 2px solid #FF6347;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-right img {
+  width: 24px;
+  cursor: pointer;
+  filter: brightness(0) invert(1); /* Makes icons white */
+}
+
+.navbar button {
+  background: transparent;
+  font-size: 16px;
+  color: #fff;
+  border: 1px solid #FF6347; /* Tomato Red border */
+  border-radius: 50px;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #FF6347; /* Tomato Red */
+  color: #000;
+}
+
+.navbar-basket-icon {
+  position: relative;
+}
+
+.navbar-basket-icon .dot {
+  position: absolute;
+  min-width: 18px;
+  min-height: 18px;
+  background-color: #FF6347; /* Tomato Red */
+  border-radius: 50%;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-basket-icon .dot p {
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.navbar-basket-icon .dotHidden {
+  display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1050px) {
+  .navbar .logo {
+    width: 130px;
+  }
+  
+  .navbar-menu a {
+    font-size: 16px;
+  }
+
+  .navbar-right {
+    gap: 20px;
+  }
+
+  .navbar-right button {
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar .logo {
+    width: 120px;
+  }
+
+  .navbar-menu {
+    gap: 15px;
+  }
+
+  .navbar-right img {
+    width: 20px;
+  }
+
+  .navbar-right button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none;
+  }
+}
